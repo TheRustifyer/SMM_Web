@@ -1,0 +1,12 @@
+{% extends 'smm_web/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %} Crea una cuenta {% endblock %}
+
+{% block content %} 
+    <form method='POST' class='form-group'>
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type='submit' class='btn btn-success'>Regístrate</button>
+    </form>
+{% endblock %}
