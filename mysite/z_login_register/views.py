@@ -14,9 +14,12 @@ def register(response):
     else:
         form = RegisterForm()
 
-    return render(response, 'z_login_register/register.html', {'form':form})
+    return render(response, 'z_login_register/register.html', {'active_tab': "register",'form':form})
 
 
-def login(response):
+# def login(response):
+#     return render(response, 'z_login_register/login.html', {'active_tab': "login"})
 
-    return render(response, 'z_login_register/login.html')
+def logout(response):
+    return redirect('/')
+

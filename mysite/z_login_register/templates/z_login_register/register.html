@@ -1,9 +1,10 @@
-{% extends 'smm_web/base.html' %}
+{% extends 'z_login_register/logregbase.html' %}
 {% load crispy_forms_tags %}
 
 {% block title %} Crea una cuenta {% endblock %}
 
 {% block content %} 
+    <h1 class='text-center'>¡Estás a un paso de unirte a SMM!</h1>
     <form method='POST' class='form-group'>
         {% csrf_token %}
         {{ form|crispy }}

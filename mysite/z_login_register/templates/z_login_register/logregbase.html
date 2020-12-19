@@ -1,0 +1,152 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../static/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <style>
+      header {
+        width: 100%;
+        display: flex;
+        flex-direction:row;
+        justify-content: center;
+      }
+      header .navbar-brand{
+         width:50%;
+        display: flex;
+        flex-direction:row;
+        justify-content: left;
+      }
+
+      header #ssmnavbar {
+         width:50%;
+
+      }
+      .navbar-brand img {
+        height: 50px;
+        width: 50px;
+      }
+
+      .nav-masthead .nav-link:hover,
+      .nav-masthead .nav-link:focus {
+        border-bottom-color: rgba(255, 255, 255, 0.25);
+      }
+      .nav-masthead .nav-link {
+        padding: 0.25rem 0;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.5);
+        background-color: transparent;
+        border-bottom: 0.25rem solid transparent;
+        border-bottom-color: transparent;
+        margin: 0 0 0 0.5rem;
+      }
+
+      .nav-masthead .active {
+        color: #fff;
+        border-bottom-color: #fff;
+      }
+
+      .nav-link:focus,
+      .nav-link:hover {
+        text-decoration: none;
+      }
+
+      .nav-link {
+        display: block;
+        padding: 0.5rem 1rem;
+      }
+      .form-container{
+        margin: auto;
+        width: 40%;
+        margin-top: 1rem;
+      
+      }  
+      main{
+        background-color: rgba(255,255,255,0.75);
+        height:100%;
+      }
+      footer{
+              height: 50px;
+              display: flex;
+              flex-direction:row;
+              justify-content: center;
+              color:white;
+              margin-top: 1rem;
+      }
+      body{
+        background-image: url("../static/assets/brand/initial_bg.jpg");
+      }
+
+    </style>
+    <!-- Custom styles for this template -->
+
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+
+  <body>
+    <header class="bg-dark">
+     <div class="navbar-brand">
+          
+       <a href="/">
+       <img src="../static/assets/brand/0dcmainsmall.png" />
+        </a>
+        </div>
+      <nav class="navbar navbar-expand-md navbar-dark nav-masthead">
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#ssmnavbar"
+          aria-controls="ssmnavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          id="ssmnavbar"
+          class="collapse navbar-collapse justify-content-center"
+        >
+          <a class="nav-link" href="/">Inicio</a>
+          <a class="nav-link {% if active_tab == "producto"%} active{% endif %}" href="/producto">Producto</a>
+          <a class="nav-link" href="https://zerodaycode.eu/">Zero Day Code</a>
+          <a class="nav-link {% if active_tab == "login" %}active{% endif %}" href="/login">Login</a>
+          <a class="nav-link {% if active_tab == "register" %}active{% endif %}" href="/register">Registro</a>
+        </div>
+      </nav>
+    </header>
+    <body>
+      <main class='container rounded-top'>
+        <div class='form-container'>
+      {% block content %}{% endblock %}
+      </div>
+      </main>
+
+      <footer class="container-fluid bg-dark navbar fixed-bottom">
+    			<div class='self-align-center'>
+      				<p>Esta aplicación está creada por  <a href="https://zerodaycode.eu/">Zero Day Code</a>.</p>
+    			</div>
+  			</footer>
+    
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    >
+    </script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="../static/assets/js/vendor/jquery.slim.min.js"><\/script>'
+        );
+    </script>
+    <script src="../static/assets/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
