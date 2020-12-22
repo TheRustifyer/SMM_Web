@@ -1,3 +1,10 @@
+# Django security files
+settings.py
+migrations/
+
+# Ignored files
+app.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
