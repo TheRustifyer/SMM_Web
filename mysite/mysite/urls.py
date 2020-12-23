@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('smm_web.urls')),
     path('', include('z_login_register.urls')),
-    path('', include("smm_web.RESTapi.urls")), #RESTapi endpoints
+    path('api/', include("smm_web.RESTapi.urls")), #RESTapi endpoints
     path('api-auth/', include('rest_framework.urls')),
     path('api-token-auth/', views.obtain_auth_token, name='api-token-auth'),
 ]

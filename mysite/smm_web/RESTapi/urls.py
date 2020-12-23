@@ -1,12 +1,11 @@
-from rest_framework import routers
+
 from django.urls import path
-from .views import UserDataAPIView, CustomAuthToken, ApiIndexView
+from .views import UserDataAPIView, CustomAuthToken
 
 app_name = 'tkinter_api'
 
 urlpatterns = [
-    path('data', UserDataAPIView.as_view()),
-    # path('<pk>/', RetrieveUserDataAppAPIView.as_view(), name='retrieve_data'),
-    path('api-token-auth/', CustomAuthToken.as_view()),
-    path('index/', ApiIndexView.as_view()),
+    path('data', UserDataAPIView.as_view()), #! Ojo, este sólo debería de estar aquí para desarrollo. Eliminar/esconder en producción
+    path('custom-token/', CustomAuthToken.as_view()), #? Este es el que devuelve los datos correctos al usuario que se loguea en la desktop app.
+
 ]
