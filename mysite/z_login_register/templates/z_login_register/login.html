@@ -2,7 +2,7 @@
 
 
 {% block title %}
-Login Here
+Entrar
 {% endblock %}
 
 {% load crispy_forms_tags %}
@@ -10,8 +10,10 @@ Login Here
 {% block content %}
     <form method="post" class="from-group">
 		{% csrf_token %}
+		<br></br>
 		{{form|crispy}}
 		<p>Aún no tienes una cuenta? Regístrate <a href="/register">aquí.</a></p>
 		<button type="submit" class="btn btn-success">Login</button>	
+		<br></br>
     </form>
 {% endblock %}

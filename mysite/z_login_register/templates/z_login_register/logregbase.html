@@ -3,7 +3,7 @@
 <html>
   <head>
     <link href="../static/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
-
+    <link rel="icon" href="../static/assets/brand/0dcico.png" type:'image/png'>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -123,17 +123,18 @@
       </nav>
     </header>
     <body>
-      <main class='container rounded-top'>
+      <main class='container rounded-top rounded-bottom'>
         <div class='form-container'>
-      {% block content %}{% endblock %}
+      
       </div>
+      {% block content %}{% endblock %}
       </main>
 
-      <footer class="container-fluid bg-dark navbar fixed-bottom">
+      {% comment %} <footer class="container-fluid bg-dark navbar fixed-bottom">
     			<div class='self-align-center'>
       				<p>Esta aplicación está creada por  <a href="https://zerodaycode.eu/">Zero Day Code</a>.</p>
     			</div>
-  			</footer>
+  			</footer> {% endcomment %}
     
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

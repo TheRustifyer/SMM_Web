@@ -3,11 +3,14 @@
 
 {% block title %} Crea una cuenta {% endblock %}
 
-{% block content %} 
+{% block content %}
+    <br></br> 
     <h1 class='text-center'>¡Estás a un paso de unirte a SMM!</h1>
+    <br></br>
     <form method='POST' class='form-group'>
         {% csrf_token %}
         {{ form |crispy }}
         <button type='submit' class='btn btn-success'>Regístrate</button>
+        <br></br>
     </form>
 {% endblock %}
